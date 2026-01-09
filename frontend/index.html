@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: le dice al navegador que esto es HTML moderno (HTML5). No tiene variantes útiles hoy -->
+
+<html lang="es">
+<!-- html: envuelve TODO el documento.
+     lang: idioma principal del contenido (es, en, fr, etc) -->
+
+<head>
+  <!-- head: información para el navegador, NO se ve en la página -->
+
+  <meta charset="UTF-8" />
+  <!-- charset: cómo se interpretan letras, acentos, ñ, símbolos.
+       UTF-8 es el estándar universal. No hay otra opción real hoy -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- viewport: controla cómo se ve en móviles.
+       width=device-width -> usa el ancho real del dispositivo
+       initial-scale -> zoom inicial -->
+
+  <title>Mi primera página</title>
+  <!-- title: texto de la pestaña del navegador -->
+
+</head>
+
+<body>
+  <!-- body: TODO lo que el usuario ve va aquí dentro -->
+
+  <header>
+    <!-- header: parte superior de la página -->
+
+    <h1>Mi sitio web</h1>
+    <!-- h1: título principal (solo uno por página) -->
+
+    <nav>
+      <!-- nav: zona de navegación -->
+
+      <ul>
+        <!-- ul: lista sin orden -->
+
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+
+        <!-- a: enlace
+             href: a dónde apunta
+             puede ser ruta relativa (/contacto) o URL completa -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- main: contenido principal (solo uno por página) -->
+
+    <section>
+      <!-- section: bloque temático -->
+
+      <h2>Bienvenido</h2>
+
+      <p>
+        Este es un <strong>sitio ejemplo</strong> de aprendizaje en
+        <em>HTML</em>.
+      </p>
+
+      <!-- p: párrafo
+           strong: importancia
+           em: énfasis -->
+
+    </section>
+
+    <section>
+      <h2>Formulario de contacto</h2>
+
+      <form action="/enviar" method="post">
+        <!-- form:
+             action: a dónde se envían los datos
+             method: cómo se envían (get o post) -->
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <!-- input:
+             type: tipo (text, email, password, number, etc)
+             name: CLAVE para backend (es el nombre del dato)
+             required: obligatorio -->
+
+        <br>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <br>
+
+        <button type="submit">Enviar</button>
+        <!-- button:
+             type puede ser submit, button o reset -->
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- footer: pie de página -->
+
+    <p>© 2026 Mi Sitio</p>
+  </footer>
+
+</body>
+</html>
